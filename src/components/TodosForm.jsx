@@ -70,7 +70,7 @@ const TodosForm = (props) => {
                                                 <Container fluid>
                                                   <Row>
                                                     <Col>
-                                                      <input name="todoChecked"  type="checkbox" /*checked={idsToDeleteDict[i]}*/ onChange={() => addIdForDeleting(item.id)} />
+                                                      <input name="todoChecked"  type="checkbox" checked={idsToDeleteDict[i]} onChange={() => addIdForDeleting(item.id)} />
                                                     </Col>
                                                     <Col md={8}>
                                                       {item.toDo}
