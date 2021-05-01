@@ -13,13 +13,21 @@ const TodosForm = (props) => {
     }
 
     function addIdForDeleting(id){
-      idsToDeleteDict[id]=true;
+      if(idsToDeleteDict[id]===undefined){
+        idsToDeleteDict[id]=true;
+      }
+      else{
+        idsToDeleteDict[id]=!idsToDeleteDict[id];
+      }
       setDict(idsToDeleteDict);
     }
     function convertDictToArray(){
       let array=[];
       for (const [key, value] of Object.entries(idsToDeleteDict)) {
-        array.push(key);
+        if(value===true){
+          array.push(key);
+        }
+       
       }
       
       return array;

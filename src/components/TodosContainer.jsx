@@ -69,7 +69,7 @@ class TodosContainer extends React.Component {
     render() {
       return (
           <div>
-              <TodosForm todos={this.state.todos} add={this.addTodo} update={ this.updateTodo} delete={this.deleteTodo} setId={this.setId}/>
+              <TodosForm todos={this.state.todos} add={this.addTodo} update={ this.updateTodo} delete={this.deleteTodo}/>
           </div>
       );
     }
